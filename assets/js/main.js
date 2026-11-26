@@ -42,7 +42,7 @@
   $('#themeToggle').addEventListener('click', () => {
     const t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     root.setAttribute('data-theme', t);
-    try { localStorage.setItem('swais-theme', t); } catch (e) {}
+    try { sessionStorage.setItem('swais-theme-s', t); } catch (e) {}   // dark lasts only for this visit; every new visit opens light
   });
 
   /* ---------- Nav ---------- */
